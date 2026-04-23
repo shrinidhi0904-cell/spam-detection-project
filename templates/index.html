@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spam Detection</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            text-align: center;
+            padding: 40px;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        textarea {
+            width: 90%;
+            padding: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        h3 {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Email Spam Detection</h2>
+
+    <form action="/predict" method="post">
+        <textarea name="message" rows="5" placeholder="Enter your message..."></textarea><br><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+</div>
+
+</body>
+</html>
